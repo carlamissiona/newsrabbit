@@ -14,8 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-/*
+ 
+/*  
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
@@ -25,13 +25,15 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
+Route::get('/api/news', 'NewsController@index');
+Route::post('/api/sources', 'SourcesController@index');
+Route::get('/api/category', 'CategoryController@index');
+Route::post('/api/news/search', 'NewsController@search');
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
-
+Route::get('/home', 'HomeController@index'); 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/home', 'HomeController@index');
+     
+     
 });
