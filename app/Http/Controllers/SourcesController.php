@@ -12,11 +12,18 @@ class SourcesController extends Controller
      /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response  
      */
     public function index(Request $request)
     {
-      if ($request->isMethod('post')){
+      
+      
+      
+      
+      
+    
+      if($request->isMethod('post')){
+        // for api 
         $fetchsize = $request->all()['fetchsize'];
         $sources = Sources::all()->take($fetchsize);
         return response()->json($sources);
@@ -24,6 +31,18 @@ class SourcesController extends Controller
       }
         
     }  
+    public function read($id)
+    {
+      
+      echo $id;
+
+        $source =  Sources::find($id);  
+      //
+      return $source;
+      
+       // return view('SourcesCrud.read',compact('source'));
+
+    }
   
       
 }

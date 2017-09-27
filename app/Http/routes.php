@@ -25,6 +25,11 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
+
+
+
+
+Route::resource('/sources', 'SourcesController');
 Route::get('/api/news', 'NewsController@index');
 Route::post('/api/sources', 'SourcesController@index');
 Route::get('/api/category', 'CategoryController@index');

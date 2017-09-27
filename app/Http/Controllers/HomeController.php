@@ -40,6 +40,7 @@ class HomeController extends Controller
       
     }
    public function sendsms(){
+     
      $message="Test 23";
      $number="09166032173";
      $apicode="TR-DEVTU032173_QJ3YG";
