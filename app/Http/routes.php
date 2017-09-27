@@ -29,6 +29,9 @@ Route::get('/api/news', 'NewsController@index');
 Route::post('/api/sources', 'SourcesController@index');
 Route::get('/api/category', 'CategoryController@index');
 Route::post('/api/news/search', 'NewsController@search');
+Route::get('/home/getfeeds', 'HomeController@getfeeds');
+Route::get('/app/sendsms', 'HomeController@sendsms');
+
 
 Route::get('/home', 'HomeController@index'); 
 Route::group(['middleware' => 'web'], function () {

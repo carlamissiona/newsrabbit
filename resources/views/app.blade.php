@@ -67,7 +67,7 @@
 		</div> <!-- /row -->
 	<div class="row news-tag-row">
 			 			<!-- Tags categories and news sources  -->
-					<div class="col-md-6 col-lg-6 col-lg-offset-3 col-md-offset-3">
+					<div class="col-md-7 col-lg-7 col-lg-offset-3 col-md-offset-3">
 		
 							<ul class="tags-nws text-center">
 							</ul>
